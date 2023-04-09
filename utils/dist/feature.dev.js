@@ -19,12 +19,12 @@ var sendcookie = function sendcookie(user, res, message) {
   }, process.env.JWT_SECRET);
 
   console.log(process.env.NODE_ENV);
-  console.log(process.env.NODE_ENV === "development");
+  console.log(process.env.NODE_ENV === "Development");
   res.status(statusCode).cookie("token", token, {
     httpOnly: true,
     maxAge: 15 * 60 * 1000,
-    sameSite: process.env.NODE_ENV === "development" ? "lax" : "none",
-    sercure: process.env.NODE_ENV === "development" ? false : true
+    sameSite: process.env.NODE_ENV === "Development" ? "lax" : "none",
+    sercure: process.env.NODE_ENV === "Development" ? false : true
   }).json({
     success: true,
     message: message

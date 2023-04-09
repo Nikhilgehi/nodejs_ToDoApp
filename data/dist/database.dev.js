@@ -12,8 +12,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var connectDb = function connectDb() {
   _mongoose["default"].connect(process.env.MONGO_URI, {
     dbName: "newAPI"
-  }).then(function () {
-    console.log("database connected!!");
+  }).then(function (c) {
+    console.log("database connected with ".concat(c.connection.host, "!!"));
   })["catch"](function (e) {
     console.log(e);
   });
