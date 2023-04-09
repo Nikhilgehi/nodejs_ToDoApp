@@ -8,6 +8,7 @@
     "node":">=14.20.1"
   },
   "scripts": {
+    "start":"npm server.js",
     "dev": " nodemon server.js"
   },
   "author": "",
